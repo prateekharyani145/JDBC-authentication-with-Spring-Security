@@ -25,6 +25,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		auth
 		.jdbcAuthentication()
 		.dataSource(datasource);
+
+		// Default Query we can change schema and here change table name		
+//		.usersByUsernameQuery("select username,password,enable from users where username = ?")
+//		.authoritiesByUsernameQuery("select username,authority from authorities where username =?");
+		
+		
+		
 //		.withDefaultSchema()
 //		.withUser(User.withUsername("user") 
 //				.password("pass")
